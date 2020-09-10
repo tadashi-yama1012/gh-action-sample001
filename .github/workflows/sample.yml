@@ -42,7 +42,6 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php-version }}
-      - run: composer validate
       - run: composer install --prefer-dist --no-progress --no-suggest
       - run: composer run-script test
 
