@@ -1,0 +1,27 @@
+{
+  "name": "gh-actions-sample001",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tadashi-yama1012/gh-action-sample001.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tadashi-yama1012/gh-action-sample001/issues"
+  },
+  "homepage": "https://github.com/tadashi-yama1012/gh-action-sample001#readme",
+  "dependencies": {
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  }
+}
