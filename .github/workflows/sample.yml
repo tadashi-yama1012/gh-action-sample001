@@ -19,7 +19,8 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [8.x, 10.x, 12.x]
+        node-version: [12.x]
+        php-version: [7.4]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -36,6 +37,14 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm install
       - run: npx webpack
+
+      - name: Run PHPUnit test
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-version }}
+        run: composer validate
+        run: composer install --prefer-dist --no-progress --no-suggest
+        run: composer run-script test
 
       - name: Copy file via ssh password
         uses: appleboy/scp-action@master
