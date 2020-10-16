@@ -51,5 +51,5 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSH_KEY }}
-          source: "hoge.txt,test,dist"
-          target: "/home/ec2-user"
+          source: "./"
+          target: "/home/ec2-user/test"
